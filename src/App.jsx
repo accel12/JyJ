@@ -45,7 +45,16 @@ function App() {
         }}
       ></div>
       <div className="primerbloque">
-        <p className="great-vibes-regular">Nuestro Matrimonio</p>
+        <p
+          style={{
+            fontFamily: "LovelaceText",
+            color: "#ff93cd",
+            fontWeight: "bold",
+            fontSize: "42px",
+          }}
+        >
+          ¡Nos casamos!
+        </p>
         <label className="alice-regular">STALYN</label>
         <div
           style={{
@@ -55,12 +64,32 @@ function App() {
             justifyContent: "center",
           }}
         >
-          <div style={{ width: "40px" }}>
-            <hr />
+          <div style={{ width: "30px" }}>
+            <hr
+              style={{
+                border: "none",
+                height: "1px",
+                backgroundColor: "#ff93cd",
+              }}
+            />
           </div>
-          <p className="great-vibes-regular">Y</p>
-          <div style={{ width: "40px" }}>
-            <hr />
+          <p
+            style={{
+              fontFamily: "SlightRegular",
+              fontSize: "20px",
+              marginInline: 20,
+            }}
+          >
+            y
+          </p>
+          <div style={{ width: "30px" }}>
+            <hr
+              style={{
+                border: "none",
+                height: "1px",
+                backgroundColor: "#ff93cd",
+              }}
+            />
           </div>
         </div>
 
@@ -76,8 +105,9 @@ function App() {
             style={{
               backgroundColor: "#FBD4E8",
               borderRadius: 20,
-              width: "95%",
-              padding: "10px",
+              width: "240px",
+              paddingTop: "5px",
+              paddingInline: "5px",
             }}
           >
             <div
@@ -92,8 +122,9 @@ function App() {
                 <p
                   style={{
                     fontWeight: "800",
-                    fontSize: "26px",
+                    fontSize: "16px",
                     margin: 0,
+                    marginLeft: 20,
                     color: "black",
                   }}
                 >
@@ -102,9 +133,9 @@ function App() {
               </div>
               <div>
                 <svg
-                  height="24"
+                  height="20"
                   viewBox="0 0 24 24"
-                  width="24"
+                  width="20"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#8F5472"
                 >
@@ -118,7 +149,7 @@ function App() {
 
             <p
               style={{
-                fontSize: "26px",
+                fontSize: "12px",
                 margin: 0,
                 color: "#8F5472",
               }}
@@ -133,8 +164,9 @@ function App() {
       </div>
       <div className="segundobloque">
         <p className="fraunces-invitacion">
-          Te invitamos a nuestro matrimonio que
-          <br /> se celebrará el próximo
+          TE INVITAMOS A NUESTRO <br />
+          MATRIMONIO QUE SE CELEBRARÁ EL <br />
+          PRÓXIMO
         </p>
         <p className="fraunces-fecha">21 de SETIEMBRE, 2024</p>
         <div
@@ -203,7 +235,12 @@ function App() {
             </button>
           </div>
         </div>
-        <p className="great-vibes-regular">Faltan:</p>
+        <p
+          className="great-vibes-regular"
+          style={{ fontSize: "40px", marginBottom: 5 }}
+        >
+          Faltan:
+        </p>
         <div
           style={{
             display: "flex",
@@ -237,17 +274,17 @@ function App() {
               style={{
                 width: 300,
                 display: "flex",
-                marginLeft: "12px",
+                marginLeft: "18px",
                 marginTop: -20,
               }}
             >
-              <label className="fraunces-fecha" style={{ marginRight: "25px" }}>
+              <label className="fraunces-fecha" style={{ marginRight: "38px" }}>
                 Días
               </label>
-              <label className="fraunces-fecha" style={{ marginRight: "25px" }}>
+              <label className="fraunces-fecha" style={{ marginRight: "35px" }}>
                 Horas
               </label>
-              <label className="fraunces-fecha" style={{ marginRight: "38px" }}>
+              <label className="fraunces-fecha" style={{ marginRight: "50px" }}>
                 Min
               </label>
               <label className="fraunces-fecha">Seg</label>
@@ -293,40 +330,32 @@ function App() {
         </p>
         <img src={rings} alt="rings" className="iconos" />
         <p
-          className="fraunces-texto2"
-          style={{ fontStyle: "italic", fontSize: "20px" }}
+          style={{
+            fontFamily: "ClearSansRegular",
+            letterSpacing: "2px",
+            fontSize: "16px",
+          }}
         >
           Con gran ilusión, deseamos
-          <br
-            className="fraunces-texto2"
-            style={{ fontStyle: "italic", fontSize: "20px" }}
-          />
+          <br />
           compartir este momento único
-          <br
-            className="fraunces-texto2"
-            style={{ fontStyle: "italic", fontSize: "20px" }}
-          />
-          rodeados de aquellos que han sido{" "}
-          <br
-            className="fraunces-texto2"
-            style={{ fontStyle: "italic", fontSize: "20px" }}
-          />
-          parte fundamental de nuestra{" "}
-          <br
-            className="fraunces-texto2"
-            style={{ fontStyle: "italic", fontSize: "20px" }}
-          />
+          <br />
+          rodeados de aquellos que han sido
+          <br />
+          parte fundamental de nuestra
+          <br />
           historia.
         </p>
         <p
-          className="fraunces-texto2"
-          style={{ fontStyle: "italic", fontSize: "20px", marginTop: 30 }}
+          style={{
+            fontFamily: "ClearSansRegular",
+            letterSpacing: "2px",
+            fontSize: "16px",
+            marginTop: 30,
+          }}
         >
-          Será un honor contar con su{" "}
-          <br
-            className="fraunces-texto2"
-            style={{ fontStyle: "italic", fontSize: "20px" }}
-          />
+          Será un honor contar con su
+          <br />
           presencia.
         </p>
         {/* <p
@@ -343,25 +372,24 @@ function App() {
           Confirmar Asistencia
         </p> */}
         <p
-          className="alice-regular"
+          className="fraunces-texto1"
           style={{
-            fontWeight: "600",
+            fontWeight: "800",
             letterSpacing: "3px",
+            fontSize: "24px",
             color: "#EEAEC9",
-            fontStyle: "italic",
           }}
         >
           Confirmar Asistencia
         </p>
-        <p
-          className="fraunces-texto2"
-          style={{ fontSize: "16px", fontWeight: "600" }}
-        >
-          POR FAVOR, CONFIRMAR ANTES DEL
-          <br className="fraunces-texto2" style={{ fontSize: "16px" }} />
-          20 DE AGOSTO
+        <p className="fraunces-texto2" style={{ fontSize: "12px" }}>
+          POR FAVOR, CONFIRMAR ANTES <br />
+          DEL 20 DE AGOSTO
         </p>
-        <img />
+        <div style={{ marginBlock: "40px" }}>
+          <img src={calendario} className="iconos" />
+        </div>
+
         <button
           className="btn"
           onClick={() => {
@@ -371,10 +399,15 @@ function App() {
           CONFIRMAR AQUI
         </button>
         <p
-          className="alice-regular"
-          style={{ fontWeight: "600", letterSpacing: "3px" }}
+          style={{
+            fontWeight: "600",
+            fontFamily: "LovelaceText",
+            letterSpacing: "3px",
+            fontSize: "32px",
+            marginBlock: "50px",
+          }}
         >
-          TE ESPERAMOS!
+          ¡Te esperamos!
         </p>
       </div>
       <div

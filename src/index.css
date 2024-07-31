@@ -4,6 +4,24 @@ body {
   justify-content: center;
   margin: 0 auto;
 }
+@font-face {
+  font-family: "LovelaceText";
+  src: url("../public/fonts/LovelaceText.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SlightRegular";
+  src: url("../public/fonts/SlightRegular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClearSansRegular";
+  src: url("../public/fonts/ClearSansRegular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* p {
   margin-bottom: 9px;
   margin-top: 9px;
@@ -33,6 +51,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 38px;
+  letter-spacing: 5px;
 }
 .bad-script-regular {
   font-family: "Bad Script", cursive;
@@ -49,18 +68,18 @@ body {
 }
 .fraunces-fecha {
   font-family: "Fraunces", serif;
+  /* color: #ff93cd; */
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-size: 22px;
+  /* font-weight: 800; */
+  font-size: 16px;
   font-style: normal;
   font-variation-settings: "SOFT" 0, "WONK" 0;
 }
 .fraunces-invitacion {
-  font-family: "Fraunces", serif;
-  font-style: italic;
+  font-family: "ClearSansRegular";
   font-optical-sizing: auto;
-  font-weight: 600;
-  font-size: 14px;
+  font-size: 11px;
+  letter-spacing: 4px;
   font-variation-settings: "SOFT" 0, "WONK" 0;
 }
 .fraunces-texto1 {

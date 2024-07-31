@@ -75,6 +75,7 @@ const Reproductor = () => {
           style={{
             display: "flex",
             alignItems: "center",
+            fontSize: 11,
           }}
         >
           {formatTime(currentTime)}
@@ -96,6 +97,7 @@ const Reproductor = () => {
           style={{
             display: "flex",
             alignItems: "center",
+            fontSize: 11,
           }}
         >
           {formatTime(duration)}
@@ -105,9 +107,9 @@ const Reproductor = () => {
         {!play ? (
           <div onClick={handlePlay} style={{ cursor: "pointer" }}>
             <svg
-              height="48"
+              height="30"
               viewBox="0 0 48 48"
-              width="48"
+              width="30"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path d="M0 0h48v48H0z" fill="none" />
@@ -117,9 +119,9 @@ const Reproductor = () => {
         ) : (
           <div onClick={handlePause} style={{ cursor: "pointer" }}>
             <svg
-              height="48"
+              height="30"
               viewBox="0 0 48 48"
-              width="48"
+              width="30"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path d="M0 0h48v48H0z" fill="none" />
