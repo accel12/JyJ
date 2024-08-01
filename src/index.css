@@ -6,19 +6,19 @@ body {
 }
 @font-face {
   font-family: "LovelaceText";
-  src: url("../public/fonts/LovelaceText.otf") format("opentype");
+  src: url("/public/fonts/LovelaceText.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "SlightRegular";
-  src: url("../public/fonts/SlightRegular.ttf") format("opentype");
+  src: url("/public/fonts/SlightRegular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "ClearSansRegular";
-  src: url("../public/fonts/ClearSansRegular.ttf") format("opentype");
+  src: url("/public/fonts/ClearSansRegular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -29,15 +29,20 @@ body {
 .primerbloque {
   text-align: center;
   margin-bottom: 30px;
+  max-width: 540px;
 }
 .segundobloque {
   text-align: center;
 }
 .tercerbloque {
   text-align: center;
+  max-width: 540px;
 }
 .container {
-  max-width: 540px;
+  /* max-width: 540px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .great-vibes-regular {
   font-family: "Great Vibes", cursive;
@@ -110,4 +115,29 @@ body {
 }
 .iconos {
   height: 70px;
+}
+.ContenedorFlex {
+  display: flex;
+  justify-content: "center";
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.ContenedorInstruccion {
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .ContenedorFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: "center";
+    margin-bottom: 20px;
+    gap: 30px;
+  }
+  .ContenedorInstruccion {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
 }

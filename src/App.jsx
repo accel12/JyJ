@@ -36,15 +36,15 @@ function App() {
   }, []);
   return (
     <div className="container">
-      <div
-        style={{
-          backgroundImage: `url(${fondoExtremoTop})`,
-          backgroundRepeat: "repeat-x",
-          height: "100px",
-          backgroundSize: "auto 100px",
-        }}
-      ></div>
       <div className="primerbloque">
+        <div
+          style={{
+            backgroundImage: `url(${fondoExtremoTop})`,
+            backgroundRepeat: "repeat-x",
+            height: "100px",
+            backgroundSize: "auto 100px",
+          }}
+        ></div>
         <p
           style={{
             fontFamily: "LovelaceText",
@@ -169,25 +169,16 @@ function App() {
           PRÓXIMO
         </p>
         <p className="fraunces-fecha">21 de SETIEMBRE, 2024</p>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 5,
-            marginBottom: 50,
-            marginLeft: 5,
-            marginRight: 5,
-          }}
-        >
-          <div>
-            <div style={{ height: "350px" }}>
+        <div className="ContenedorFlex">
+          <div className="ContenedorInstruccion">
+            <div style={{ flexGrow: 1 }}>
               <p className="fraunces-texto1">CEREMONIA</p>
               <img src={iglesia} alt="iglesia" className="iconos" />
               <p className="fraunces-texto2">12:30 PM</p>
               <p className="fraunces-texto2">IGLESIA</p>
               <p className="fraunces-texto1">
-                SEÑOR DE LA DIVINA
-                <br /> MISERICORDIA
+                SEÑOR DE LA <br />
+                DIVINA MISERICORDIA
               </p>
               <p className="fraunces-texto2">
                 Av. CAMINOS DEL INCA
@@ -195,22 +186,23 @@ function App() {
                 <br /> SURCO
               </p>
             </div>
-
-            <button
-              style={{ width: "150px" }}
-              className="btn"
-              onClick={() => {
-                window.open(
-                  "https://maps.app.goo.gl/ouVLrrYdSLEc1cm26",
-                  "_blank"
-                );
-              }}
-            >
-              VER MAPA
-            </button>
+            <div>
+              <button
+                style={{ width: "150px" }}
+                className="btn"
+                onClick={() => {
+                  window.open(
+                    "https://maps.app.goo.gl/ouVLrrYdSLEc1cm26",
+                    "_blank"
+                  );
+                }}
+              >
+                VER MAPA
+              </button>
+            </div>
           </div>
-          <div>
-            <div style={{ height: "350px" }}>
+          <div className="ContenedorInstruccion">
+            <div style={{ flexGrow: 1 }}>
               <p className="fraunces-texto1">RECEPCIÓN</p>
               <img src={brindis} alt="brindis" className="iconos" />
               <p className="fraunces-texto2">2:30 PM</p>
@@ -220,91 +212,106 @@ function App() {
               </p>
               <p className="fraunces-texto2">PACHACAMAC</p>
             </div>
-
-            <button
-              className="btn"
-              style={{ width: "150px" }}
-              onClick={() => {
-                window.open(
-                  "https://maps.app.goo.gl/Hd5EYF8HFy5yBAy66",
-                  "_blank"
-                );
-              }}
-            >
-              VER MAPA
-            </button>
-          </div>
-        </div>
-        <p
-          className="great-vibes-regular"
-          style={{ fontSize: "40px", marginBottom: 5 }}
-        >
-          Faltan:
-        </p>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            marginBottom: 45,
-          }}
-        >
-          <div style={{ width: 300 }}>
-            {/* Aquí está el marcador de posición para el contador de TickCounter */}
-            <a
-              data-type="countdown"
-              data-id="5497001"
-              className="tickcounter"
-              style={{
-                display: "block",
-                left: 0,
-                width: "100%",
-                top: -25,
-                height: 0,
-                position: "relative",
-                paddingBottom: "25%",
-                margin: "0 auto",
-              }}
-              title="My countdown"
-              href="//www.tickcounter.com/"
-            >
-              My countdown
-            </a>
-            <div
-              style={{
-                width: 300,
-                display: "flex",
-                marginLeft: "18px",
-                marginTop: -20,
-              }}
-            >
-              <label className="fraunces-fecha" style={{ marginRight: "38px" }}>
-                Días
-              </label>
-              <label className="fraunces-fecha" style={{ marginRight: "35px" }}>
-                Horas
-              </label>
-              <label className="fraunces-fecha" style={{ marginRight: "50px" }}>
-                Min
-              </label>
-              <label className="fraunces-fecha">Seg</label>
+            <div>
+              <button
+                className="btn"
+                style={{ width: "150px" }}
+                onClick={() => {
+                  window.open(
+                    "https://maps.app.goo.gl/Hd5EYF8HFy5yBAy66",
+                    "_blank"
+                  );
+                }}
+              >
+                VER MAPA
+              </button>
             </div>
+          </div>
+          <div className="ContenedorInstruccion">
+            <p className="fraunces-texto1">DRESS CODE</p>
+            <div>
+              <img src={dress} alt="dress" className="iconos" />
+              <img src={tuxedo} alt="tuxedo" className="iconos" />
+            </div>
+            <p className="fraunces-texto2" style={{ marginBottom: "1px" }}>
+              BODA DE JARDÍN
+            </p>
+            <p className="fraunces-texto2">
+              PREPARENSE PARA UNA BODA <br />
+              LLENA DE COLORES, DEJEN EL <br />
+              BLANCO PARA LA NOVIA
+            </p>
           </div>
         </div>
       </div>
       <div className="tercerbloque">
         <div>
-          <img src={dress} alt="dress" className="iconos" />
-          <img src={tuxedo} alt="tuxedo" className="iconos" />
+          <p
+            className="great-vibes-regular"
+            style={{ fontSize: "40px", marginBottom: 5 }}
+          >
+            Faltan:
+          </p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              marginBottom: 45,
+            }}
+          >
+            <div style={{ width: 300 }}>
+              {/* Aquí está el marcador de posición para el contador de TickCounter */}
+              <a
+                data-type="countdown"
+                data-id="5497001"
+                className="tickcounter"
+                style={{
+                  display: "block",
+                  left: 0,
+                  width: "100%",
+                  top: -25,
+                  height: 0,
+                  position: "relative",
+                  paddingBottom: "25%",
+                  margin: "0 auto",
+                }}
+                title="My countdown"
+                href="//www.tickcounter.com/"
+              >
+                My countdown
+              </a>
+              <div
+                style={{
+                  width: 300,
+                  display: "flex",
+                  marginLeft: "18px",
+                  marginTop: -20,
+                }}
+              >
+                <label
+                  className="fraunces-fecha"
+                  style={{ marginRight: "38px" }}
+                >
+                  Días
+                </label>
+                <label
+                  className="fraunces-fecha"
+                  style={{ marginRight: "35px" }}
+                >
+                  Horas
+                </label>
+                <label
+                  className="fraunces-fecha"
+                  style={{ marginRight: "50px" }}
+                >
+                  Min
+                </label>
+                <label className="fraunces-fecha">Seg</label>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <p className="fraunces-texto1">DRESS CODE</p>
-        <p className="fraunces-texto2">BODA DE JARDÍN</p>
-        <p className="fraunces-texto2">
-          PREPARENSE PARA UNA BODA <br className="fraunces-texto2" /> LLENA DE
-          COLORES, DEJEN <br className="fraunces-texto2" /> EL BLANCO PARA LA
-          NOVIA
-        </p>
         <img src={gift} alt="gift" className="iconos" />
         <p className="fraunces-texto2">
           SI DESEAS HACERNOS UN{" "}
@@ -409,15 +416,15 @@ function App() {
         >
           ¡Te esperamos!
         </p>
+        <div
+          style={{
+            backgroundImage: `url(${fondoExtremo})`,
+            backgroundRepeat: "repeat-x",
+            height: "100px",
+            backgroundSize: "auto 100px",
+          }}
+        ></div>
       </div>
-      <div
-        style={{
-          backgroundImage: `url(${fondoExtremo})`,
-          backgroundRepeat: "repeat-x",
-          height: "100px",
-          backgroundSize: "auto 100px",
-        }}
-      ></div>
     </div>
   );
 }
